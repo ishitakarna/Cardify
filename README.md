@@ -33,8 +33,7 @@ Just follow the
 
 # How to contribute?
 1. Fork the project.
-1. Create a different branch.
-1. Add your code to that branch.
+1. Clone it and add your code.
 1. Create a [pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) 
 
 <p align="center">Made with :heart: by Amarjit Mallick</p>
