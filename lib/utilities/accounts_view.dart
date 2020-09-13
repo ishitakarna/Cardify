@@ -7,15 +7,6 @@ class AccountsView extends StatefulWidget {
 }
 
 class _AccountsViewState extends State<AccountsView> {
-  final myController = TextEditingController();
-  final myController2 = TextEditingController();
-  @override
-  void dispose() {
-    myController.dispose();
-    myController2.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,13 +23,7 @@ class _AccountsViewState extends State<AccountsView> {
                   'Accounts',
                   style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
                 ),
-                IconButton(
-                  icon: Icon(
-                    Icons.add_circle_outline,
-                    size: 30,
-                  ),
-                  onPressed: () {},
-                )
+                AddAccount(),
               ],
             ),
             SizedBox(
@@ -76,6 +61,24 @@ class _AccountWidgetState extends State<AccountWidget> {
           borderRadius: BorderRadius.circular(15),
         ),
       ),
+    );
+  }
+}
+
+class AddAccount extends StatefulWidget {
+  @override
+  _AddAccountState createState() => _AddAccountState();
+}
+
+class _AddAccountState extends State<AddAccount> {
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(
+        Icons.add_circle_outline,
+        size: 30,
+      ),
+      onPressed: () {},
     );
   }
 }
