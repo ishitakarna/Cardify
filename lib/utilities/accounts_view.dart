@@ -174,6 +174,7 @@ class _AccountsViewState extends State<AccountsView> {
                     openDialogBox();
                   },
                 )
+                AddAccount(),
               ],
             ),
             SizedBox(
@@ -211,6 +212,24 @@ class _AccountWidgetState extends State<AccountWidget> {
           borderRadius: BorderRadius.circular(15),
         ),
       ),
+    );
+  }
+}
+
+class AddAccount extends StatefulWidget {
+  @override
+  _AddAccountState createState() => _AddAccountState();
+}
+
+class _AddAccountState extends State<AddAccount> {
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(
+        Icons.add_circle_outline,
+        size: 30,
+      ),
+      onPressed: () {},
     );
   }
 }

@@ -17,6 +17,20 @@ class _MyAppState extends State<MyApp> {
       title: 'Cardify',
       home: HomeView(),
       theme: ThemeData(fontFamily: 'Nunito'),
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: MyBehavior(),
+          child: child,
+        );
+      },
     );
+  }
+}
+
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }
